@@ -4,7 +4,7 @@
 #
 # Usage: add this to crontab:
 #
-# */5 * * * * prometheus md5-hashsum.sh /var/lib/prometheus | sponge /var/lib/node_exporter/md5-hashsum.prom
+# */5 * * * * prometheus md5-hashsum.sh /var/lib/prometheus | sponge /var/lib/node_exporter/crc32-hashsum.prom
 #
 # 
 echo "# HELP crc32 sum CRC32 sum of file"
