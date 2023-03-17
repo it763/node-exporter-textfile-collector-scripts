@@ -9,4 +9,4 @@
 # 
 echo "# HELP crc32 sum CRC32 sum of file"
 echo "# TYPE crc32_sum gauge"
-cksum "$@" | sed 's/\(.*\) \(.*\)/crc32_sum{file="\2"} \1/'
+cksum "$@" | sed 's/ //' | sed 's/\(.*\) \(.*\)/crc32_sum{file="\2"} \1/'
