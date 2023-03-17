@@ -9,4 +9,5 @@
 # 
 echo "# HELP crc32 sum CRC32 sum of folder"
 echo "# TYPE crc32_sum_folder gauge"
-find "$@"  -type f -exec cksum {} \; | sort -k 2 | cksum |  sed 's/ //'
+
+echo "crc32_directory_sum `find "$@"  -type f -exec cksum {} \; | sort -k 2 | cksum |  sed 's/ //'`"
